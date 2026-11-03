@@ -1,0 +1,42 @@
+🟠 View the full database 👇
+SELECT * FROM analysis.trade_flows
+
+🔵count rows 
+SELECT COUNT(*) FROM analysis.trade_flows;
+
+
+🔵 This will work on any numeric column,
+Just change the column name.⬇️
+
+SELECT * 
+FROM analysis.trade_flows
+ORDER BY column_name ASC;
+
+🔵 Running this command will bring up data from 2000 to 2005.
+(Caught a year late)
+
+SELECT * FROM analysis.trade_flows
+WHERE year >= '2000' AND year < '2006';
+
+
+🔵 Find any medicine you think that is inside the table⬇️
+
+SELECT * 
+FROM schema_name.trade_flows
+WHERE exporter LIKE 'u%';
+
+
+
+🔵Skips the first 39 rows and starts displaying data from row 40. (Edit the numbers however you like)
+
+SELECT * FROM "analysis"."trade_flows"
+LIMIT 50 OFFSET 39;
+
+
+🟢Type the first letter of the name of the exporter/ trade_category / importer / key_goods you want to search for (beside the %). [With lowercase letters]
+If there is no data in the table with that character, it will look like this.👇
+
+year | exporter |importer ....
+-----------------------+--------------+-----
+(0 rows)
+
