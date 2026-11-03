@@ -7,7 +7,7 @@ from sqlalchemy.engine import URL
 DB_URL = URL.create(
     drivername="postgresql+psycopg2",
     username="postgres",
-    password="47289-+#AKn24 D",
+    password="your_password",
     host="localhost",
     port=5432,
     database="postgres",
